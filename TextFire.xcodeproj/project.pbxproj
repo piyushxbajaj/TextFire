@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0872FBBABCFF97CD2E0B5777 /* Pods_TextFire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A858F22B33D920675297C0E9 /* Pods_TextFire.framework */; };
 		264816F4224362BA00DF81ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264816F3224362BA00DF81ED /* AppDelegate.swift */; };
 		264816F6224362BA00DF81ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264816F5224362BA00DF81ED /* ViewController.swift */; };
 		264816F9224362BA00DF81ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264816F7224362BA00DF81ED /* Main.storyboard */; };
 		264816FB224362BC00DF81ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 264816FA224362BC00DF81ED /* Assets.xcassets */; };
 		264816FE224362BC00DF81ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 264816FC224362BC00DF81ED /* LaunchScreen.storyboard */; };
+		264817062243745100DF81ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 264817052243745100DF81ED /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C6DDDBCAC4C0F6DAC2ADC90 /* Pods-TextFire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextFire.debug.xcconfig"; path = "Target Support Files/Pods-TextFire/Pods-TextFire.debug.xcconfig"; sourceTree = "<group>"; };
+		24B1236411779854EE8AC496 /* Pods-TextFire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextFire.release.xcconfig"; path = "Target Support Files/Pods-TextFire/Pods-TextFire.release.xcconfig"; sourceTree = "<group>"; };
 		264816F0224362BA00DF81ED /* TextFire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextFire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		264816F3224362BA00DF81ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		264816F5224362BA00DF81ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		264816FA224362BC00DF81ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		264816FD224362BC00DF81ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		264816FF224362BC00DF81ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		264817052243745100DF81ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A858F22B33D920675297C0E9 /* Pods_TextFire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextFire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0872FBBABCFF97CD2E0B5777 /* Pods_TextFire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				264816F2224362BA00DF81ED /* TextFire */,
 				264816F1224362BA00DF81ED /* Products */,
+				BF45E4DF6F80754AD5267C68 /* Pods */,
+				D98FA95A6807E05120252591 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +69,27 @@
 				264816FA224362BC00DF81ED /* Assets.xcassets */,
 				264816FC224362BC00DF81ED /* LaunchScreen.storyboard */,
 				264816FF224362BC00DF81ED /* Info.plist */,
+				264817052243745100DF81ED /* GoogleService-Info.plist */,
 			);
 			path = TextFire;
+			sourceTree = "<group>";
+		};
+		BF45E4DF6F80754AD5267C68 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C6DDDBCAC4C0F6DAC2ADC90 /* Pods-TextFire.debug.xcconfig */,
+				24B1236411779854EE8AC496 /* Pods-TextFire.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D98FA95A6807E05120252591 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A858F22B33D920675297C0E9 /* Pods_TextFire.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 26481702224362BC00DF81ED /* Build configuration list for PBXNativeTarget "TextFire" */;
 			buildPhases = (
+				4CC3D81D18AF521A87BBFAA6 /* [CP] Check Pods Manifest.lock */,
 				264816EC224362BA00DF81ED /* Sources */,
 				264816ED224362BA00DF81ED /* Frameworks */,
 				264816EE224362BA00DF81ED /* Resources */,
+				5A6E51901768C330B4AF5555 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,12 +153,64 @@
 			buildActionMask = 2147483647;
 			files = (
 				264816FE224362BC00DF81ED /* LaunchScreen.storyboard in Resources */,
+				264817062243745100DF81ED /* GoogleService-Info.plist in Resources */,
 				264816FB224362BC00DF81ED /* Assets.xcassets in Resources */,
 				264816F9224362BA00DF81ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4CC3D81D18AF521A87BBFAA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TextFire-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A6E51901768C330B4AF5555 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextFire/Pods-TextFire-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TextFire/Pods-TextFire-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		264816EC224362BA00DF81ED /* Sources */ = {
@@ -280,6 +362,7 @@
 		};
 		26481703224362BC00DF81ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C6DDDBCAC4C0F6DAC2ADC90 /* Pods-TextFire.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +381,7 @@
 		};
 		26481704224362BC00DF81ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24B1236411779854EE8AC496 /* Pods-TextFire.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
