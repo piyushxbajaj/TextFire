@@ -12,6 +12,9 @@ import Firebase
 class ViewController: UIViewController {
 
     @IBOutlet weak var myText: UITextField!
+    var ref : DatabaseReference!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +22,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func saveButton(_ sender: Any) {
+        ref = Database.database().reference()
+        if myText.text != ""
+        {
+            ref?.child("list").childByAutoId().setValue(myText.text)
+            myText.text = ""
+        }
+        
     }
     
 }
