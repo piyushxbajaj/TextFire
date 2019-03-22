@@ -16,17 +16,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var myText: UITextField!
     
+    var handle : DatabaseHandle!
     var ref : DatabaseReference!
+    var myList:[String] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
+        handle = ref?.child("list").observe(.childAdded, with:{ (DataSnapshot) in
+            if let item  = DataSnapshot.value as? String
+            {
+                self.myList.append(item)
+                self.myTableView.reloadData()
+            }
+        }
             // Do any additional setup after loading the view, typically from a nib.
-    }
+        )}
     
     //Creating Action Outlet for the save button.
     @IBAction func saveButton(_ sender: Any) {
-        ref = Database.database().reference()
         
         if myText.text != ""
         {
@@ -39,11 +48,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     //Setting up the table view.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return myList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        cell.textLabel?.text = myList[indexPath.row]
+        return cell
     }
     
     
