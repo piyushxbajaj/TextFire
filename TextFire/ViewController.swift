@@ -36,7 +36,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     //Creating Action Outlet for the save button.
     @IBAction func saveButton(_ sender: Any) {
-        let alert = UIAlertController(title: "User name you want to enter?", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "add?", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         alert.addTextField(configurationHandler: { UITextField in
             UITextField.placeholder = "Enter the name you want to enter"
