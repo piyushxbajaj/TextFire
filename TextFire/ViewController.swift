@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     //Creating outlets of the table view and text field.
     @IBOutlet weak var myTableView: UITableView!
-    @IBOutlet weak var myText: UITextField!
+
     
     var handle : DatabaseHandle!
     var ref : DatabaseReference!
@@ -36,13 +36,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     //Creating Action Outlet for the save button.
     @IBAction func saveButton(_ sender: Any) {
-        
-        if myText.text != ""
-        {
-            ref?.child("list").childByAutoId().setValue(myText.text)
-            //Setting the element in Database
-            myText.text = ""
-        }
+        let alert = UIAlertController(title: "User name you want to enter?", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addTextField(configurationHandler: { UITextField in
+            UITextField.placeholder = "Enter the name you want to enter"
+        })
+        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { addAction in
+            
+            if let name = alert.textFields?.first?.text{
+                if name != ""
+                {
+                    self.ref?.child("list").childByAutoId().setValue(name)
+                    //Setting the element in Database
+                }
+                
+            }
+            }))
+        self.present(alert,animated: true,completion: nil)
         
     }
     
