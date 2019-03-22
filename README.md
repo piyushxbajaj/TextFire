@@ -12,7 +12,10 @@ Connected to firebase, add the username in the text field and it'll add to the f
 3)Fully funtioning adding system and displaying system on the app
 
 ...Now working on adding alertViewController
+Done!
+4)Alert view controller with text field added
 
+... Now working on deleting items too
 
 
 
